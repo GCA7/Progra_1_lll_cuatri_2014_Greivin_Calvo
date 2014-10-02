@@ -11,14 +11,27 @@ package clase2;
  */
 public class CuentaBancaria {
     //declaracion de variales
+    
     private double saldoInicial;
     private boolean hayError;
-    //Metodo constructor
-
+    
+    //Metodo constructor 
     public CuentaBancaria() {
         saldoInicial = 0;
         hayError = false;
     }
+    //Metodo constructor para aumentar la cuenta de un usuario
+    public void Deposito (double monto){
+        setSaldoInicial(getSaldoInicial() + monto);
+    }
+    //Metodo constructor para retiro de dinero
+    public void Retiro(double monto){
+        if(getSaldoInicial()>=monto)
+            setSaldoInicial(getSaldoInicial()- monto);
+        else
+            setHayError(true);
+    }
+    
     //metodos get y set
     public double getSaldoInicial() {
         return saldoInicial;
