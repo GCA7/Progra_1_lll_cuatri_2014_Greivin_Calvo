@@ -26,6 +26,7 @@ public class Clase6 {
             System.out.println("Digite la opcion que desea");
             System.out.println("1: Ejercicio 1");
             System.out.println("2: Ejercicio 2");
+            System.out.println("3: Ejercicio 3");
             opcion=oScanner.nextInt();
             switch(opcion)
             {
@@ -47,8 +48,22 @@ public class Clase6 {
                     System.out.println(oEjercicio2.Vocales());
                     System.out.println(oEjercicio2.Palindromo());
                     break;
+                case 3:
+                    
+                    Ejercicio3 oEjercicio3=new Ejercicio3();
+                    System.out.println(oEjercicio3.Rote("Liga campeon"));
+                    System.out.println(oEjercicio3.Palindromo("Somos lideres"));
+                    System.out.println(oEjercicio3.MarcaPalabra("Vamos por ese mundial de clubes","mundial"));
+ 
+                    System.out.println(oEjercicio3.CantidadRepeticiones("Vamos el pentacampeonato, por que somos los campeones de por vida campeones","campe"));
+ 
+                    System.out.println(oEjercicio3.Substring("Somos lideres",0,6));
+                    System.out.println(oEjercicio3.Mayuscula("Somos lideres"));
+                     break;
+                case 4:
+                    break;
             }
-        }while(opcion<=7);
+        }while(opcion<=4);
     }
     
 }
